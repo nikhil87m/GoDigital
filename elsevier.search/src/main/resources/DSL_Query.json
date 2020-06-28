@@ -1,0 +1,35 @@
+{
+    "query": {
+        "filtered": {
+            "query": {
+                "match_phrase": {
+                  "${BIB_REC_ENGLISH_TITLE_NAME}": "Bilateral and synchronous testicular teratoma: a case report and &  literature review"
+                }
+            },
+            "filter": {
+                "and": [
+                    {
+                      "term": {
+                            "VOLUME_FIRST_QTY": "${test}"
+                        }
+                    },
+                    {
+                        "term": {
+                            "ISSUE_FIRST_QTY": 6
+                        }
+                    },
+                    {
+                        "term": {
+                            "BIB_REC_START_PAGE_TEXT": 527
+                        }
+                    },
+                    {
+                        "term": {
+                            "${BIB_REC_END_PAGE_TEXT}": 531
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
