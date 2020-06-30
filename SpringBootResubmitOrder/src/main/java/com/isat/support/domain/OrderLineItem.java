@@ -1,6 +1,6 @@
 package com.isat.support.domain;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,16 +28,16 @@ public class OrderLineItem {
 	private String svcId;
 	
 	@Column(name="START_EXEC_DATE")
-	private Date startExecDate;
+	private Timestamp startExecDate;
 	
 	@Column(name="END_EXEC_DATE")
-	private Date endExecDate;
+	private Timestamp endExecDate;
 	
 	@Column(name="ROW_CREATED_DATE")
-	private Date rowCreatedDate;
+	private Timestamp rowCreatedDate;
 	
 	@Column(name="ROW_UPDATED_DATE")
-	private Date rowUpdatedDate;
+	private Timestamp rowUpdatedDate;
 	
 	@Column(name="STATUS")
 	private Integer status;
@@ -95,35 +95,35 @@ public class OrderLineItem {
 		this.svcId = svcId;
 	}
 
-	public Date getStartExecDate() {
+	public Timestamp getStartExecDate() {
 		return startExecDate;
 	}
 
-	public void setStartExecDate(Date startExecDate) {
+	public void setStartExecDate(Timestamp startExecDate) {
 		this.startExecDate = startExecDate;
 	}
 
-	public Date getEndExecDate() {
+	public Timestamp getEndExecDate() {
 		return endExecDate;
 	}
 
-	public void setEndExecDate(Date endExecDate) {
+	public void setEndExecDate(Timestamp endExecDate) {
 		this.endExecDate = endExecDate;
 	}
 
-	public Date getRowCreatedDate() {
+	public Timestamp getRowCreatedDate() {
 		return rowCreatedDate;
 	}
 
-	public void setRowCreatedDate(Date rowCreatedDate) {
+	public void setRowCreatedDate(Timestamp rowCreatedDate) {
 		this.rowCreatedDate = rowCreatedDate;
 	}
 
-	public Date getRowUpdatedDate() {
+	public Timestamp getRowUpdatedDate() {
 		return rowUpdatedDate;
 	}
 
-	public void setRowUpdatedDate(Date rowUpdatedDate) {
+	public void setRowUpdatedDate(Timestamp rowUpdatedDate) {
 		this.rowUpdatedDate = rowUpdatedDate;
 	}
 

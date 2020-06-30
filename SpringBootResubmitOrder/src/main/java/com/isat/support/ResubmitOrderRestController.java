@@ -1,5 +1,6 @@
 package com.isat.support;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -44,7 +45,7 @@ public class ResubmitOrderRestController {
 		logger.info(words[1]);
 	logger.info("Entry: resubmitOrder: key :"+key);
 	new SupportService().resubmitOrder(words[1], Integer.parseInt(words[0]));
-		return new ResponseEntity<String>("Resubmitted succesfully !", HttpStatus.OK);
+		return new ResponseEntity<String>("Completed succesfully !", HttpStatus.OK);
 	}
 	
 	@GetMapping("/resendResponse")
@@ -86,8 +87,11 @@ public class ResubmitOrderRestController {
 	@GetMapping("/getOrderLineItemParam")
 	public List<OrderLineItemParam> getOrderLineItemParam(@RequestParam(name="selectedOrderIdLineId", required = false) String selectedOrderIdLineId) {
 		logger.info("Entry: getOrderLineItemParam :selectedOrderIdLineId "+selectedOrderIdLineId);
+		List<OrderLineItemParam> olip = new ArrayList<OrderLineItemParam>();
+		if(!"".equals(selectedOrderIdLineId)) {
 		String[] words = selectedOrderIdLineId.split(",");
-		List<OrderLineItemParam> olip = orderLineItemParameterRepository.findByOrderIdAndLineId(Integer.parseInt(words[0]),Integer.parseInt(words[1]));
+		olip = orderLineItemParameterRepository.findByOrderIdAndLineId(Integer.parseInt(words[0]),Integer.parseInt(words[1]));
+		}
 		logger.info("Exit: getOrderLineItemParam : olip"+olip);
 		return olip;
 	}

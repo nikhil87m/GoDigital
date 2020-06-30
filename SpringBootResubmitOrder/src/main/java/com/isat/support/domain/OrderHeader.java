@@ -1,6 +1,6 @@
 package com.isat.support.domain;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,22 +34,22 @@ public class OrderHeader {
 	private String refId;
 	
 	@Column(name="EXEC_DATE")
-	private Date execDate;
+	private Timestamp execDate;
 	
 	@Column(name="START_EXEC_DATE")
-	private Date startExecDate;
+	private Timestamp startExecDate;
 	
 	@Column(name="END_EXEC_DATE")
-	private Date endExecDate;
+	private Timestamp endExecDate;
 	
 	@Column(name="ROW_CREATED_DATE")
-	private Date rowCreatedDate;
+	private Timestamp rowCreatedDate;
 	
 	@Column(name="ROW_CREATED_BY")
 	private String rowCreatedBy;
 	
 	@Column(name="ROW_UPDATED_DATE")
-	private Date rowUpdatedDate;
+	private Timestamp rowUpdatedDate;
 	
 	@Column(name="ROW_UPDATED_BY")
 	private String rowUpdatedBy;
@@ -70,7 +70,7 @@ public class OrderHeader {
 	private String respondErrorDesc;
 	
 	@Column(name="RESPOND_DATE")
-	private Date respondDate;
+	private Timestamp respondDate;
 	
 	@Column(name="CHANNEL")
 	private String channel;
@@ -88,7 +88,7 @@ public class OrderHeader {
 	private String errorMapmsg;
 	
 	@Column(name="ORDER_DATE")
-	private Date orderDate;
+	private Timestamp orderDate;
 
 	@Override
 	public String toString() {
@@ -159,35 +159,35 @@ public class OrderHeader {
 		this.refId = refId;
 	}
 
-	public Date getExecDate() {
+	public Timestamp getExecDate() {
 		return execDate;
 	}
 
-	public void setExecDate(Date execDate) {
+	public void setExecDate(Timestamp execDate) {
 		this.execDate = execDate;
 	}
 
-	public Date getStartExecDate() {
+	public Timestamp getStartExecDate() {
 		return startExecDate;
 	}
 
-	public void setStartExecDate(Date startExecDate) {
+	public void setStartExecDate(Timestamp startExecDate) {
 		this.startExecDate = startExecDate;
 	}
 
-	public Date getEndExecDate() {
+	public Timestamp getEndExecDate() {
 		return endExecDate;
 	}
 
-	public void setEndExecDate(Date endExecDate) {
+	public void setEndExecDate(Timestamp endExecDate) {
 		this.endExecDate = endExecDate;
 	}
 
-	public Date getRowCreatedDate() {
+	public Timestamp getRowCreatedDate() {
 		return rowCreatedDate;
 	}
 
-	public void setRowCreatedDate(Date rowCreatedDate) {
+	public void setRowCreatedDate(Timestamp rowCreatedDate) {
 		this.rowCreatedDate = rowCreatedDate;
 	}
 
@@ -199,11 +199,11 @@ public class OrderHeader {
 		this.rowCreatedBy = rowCreatedBy;
 	}
 
-	public Date getRowUpdatedDate() {
+	public Timestamp getRowUpdatedDate() {
 		return rowUpdatedDate;
 	}
 
-	public void setRowUpdatedDate(Date rowUpdatedDate) {
+	public void setRowUpdatedDate(Timestamp rowUpdatedDate) {
 		this.rowUpdatedDate = rowUpdatedDate;
 	}
 
@@ -255,11 +255,11 @@ public class OrderHeader {
 		this.respondErrorDesc = respondErrorDesc;
 	}
 
-	public Date getRespondDate() {
+	public Timestamp getRespondDate() {
 		return respondDate;
 	}
 
-	public void setRespondDate(Date respondDate) {
+	public void setRespondDate(Timestamp respondDate) {
 		this.respondDate = respondDate;
 	}
 
@@ -303,11 +303,11 @@ public class OrderHeader {
 		this.errorMapmsg = errorMapmsg;
 	}
 
-	public Date getOrderDate() {
+	public Timestamp getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(Date orderDate) {
+	public void setOrderDate(Timestamp orderDate) {
 		this.orderDate = orderDate;
 	}
 	
